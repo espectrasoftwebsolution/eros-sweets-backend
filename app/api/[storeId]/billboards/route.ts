@@ -89,10 +89,10 @@ export const GET = async (
     return new NextResponse(JSON.stringify(billboardsData), {
       status: 200,
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*", // Allow all origins
+        "Access-Control-Allow-Methods": "GET, OPTIONS", // Allow specific methods
+        "Access-Control-Allow-Headers": "*", // Allow all headers
+        "Content-Type": "application/json", // Required for browsers to treat it as JSON
       },
     });
   } catch (error) {
